@@ -5,7 +5,7 @@ const app = express();
 // body-parser
 app.use(express.json());
 
-// repository for posts
+// local repository for posts
 const posts = {};
 
 app.get('/posts', (req, res) => {
