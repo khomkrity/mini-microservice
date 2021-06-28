@@ -1,4 +1,5 @@
 /blog/client/node_modules
 /posts/node_modules
 /comments/node_modules
+/query/node_modules
 /event-bus/node_modules
