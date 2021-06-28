@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const { randomBytes } = require('crypto');
 
 // body-parser
 app.use(express.json());
-
+// handling cors
+app.use(cors());
 // local repository for comments
 const commentsByPostId = {};
 

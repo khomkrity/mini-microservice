@@ -1,9 +1,12 @@
 const express = require('express');
-const { randomBytes } = require('crypto');
 const app = express();
+const cors = require('cors');
+const { randomBytes } = require('crypto');
 
 // body-parser
 app.use(express.json());
+// handling cors
+app.use(cors());
 
 // local repository for posts
 const posts = {};
