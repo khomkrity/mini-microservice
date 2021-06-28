@@ -1,3 +1,4 @@
+/blog/client/node_modules
 /posts/node_modules
 /comments/node_modules
-/blog/client/node_modules
+/event-bus/node_modules
