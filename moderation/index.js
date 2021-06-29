@@ -7,6 +7,7 @@ app.use(express.json());
 
 // receive events from the event bus
 app.post('/events', async (req, res) => {
+  console.log('Received Event', req.body.type);
   const { type, data } = req.body;
   // moderate comment status
   if (type === 'CommentCreated') {
