@@ -25,6 +25,18 @@ app.post('/events', (req, res) => {
     const post = posts[postId];
     post.comments.push({ id, content, status });
   }
+
+  // update moderated comment
+  if (type === 'CommentUpdated') {
+    const { id, content, postId, status } = data;
+    const post = posts[postId];
+    const comment = post.comments.find(comment => {
+      return comment.id === id;
+    });
+    // update content and status
+    comment.status = status;
+    comment.content = content;
+  }
   console.log(posts);
   res.send({});
 });
