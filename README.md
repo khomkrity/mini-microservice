@@ -20,6 +20,35 @@ The following are the main components (services) of the system:
 - **Query**: A service used to serve and sync all the data to the client. This service is a replacement for `GET` posts and comments in order to minimize making lots of requests by the client.
 - **Event Bus**: Receives events and publishes them to all of the services.
 
+## API Reference
+
+#### Get all posts and comments
+
+```http
+  GET /posts
+```
+
+#### Add post
+
+```http
+  POST /posts
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `title`   | `string` | title or topic of the post |
+
+#### Add comment
+
+```http
+  POST /posts/:id/comments
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | id of the post |
+| `content` | `string` | comment message |
+
 ## Installation :computer:
 > cd to each service to install dependencies and run
 ```
