@@ -25,7 +25,7 @@ app.post('/posts/:id/comments', async (req, res) => {
 
   // emitting CommentCreated event to the event bus
   await axios
-    .post('http://localhost:4005/events', {
+    .post('http://event-bus-srv:4005/events', {
       type: 'CommentCreated',
       data: {
         id: commentId,
@@ -51,7 +51,7 @@ app.post('/events', async (req, res) => {
     });
     comment.status = status;
     await axios
-      .post('http://localhost:4005/events', {
+      .post('http://event-bus-srv:4005/events', {
         type: 'CommentUpdated',
         data: {
           id,
@@ -66,5 +66,6 @@ app.post('/events', async (req, res) => {
 });
 
 app.listen(4001, () => {
+  console.log('Hello. This is a comment service');
   console.log('Listening on 4001');
 });

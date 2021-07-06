@@ -14,7 +14,7 @@ app.post('/events', async (req, res) => {
     const status = data.content.includes('orange') ? 'rejected' : 'approved';
     // emit event (moderated comment) to the event bus
     await axios
-      .post('http://localhost:4005/events', {
+      .post('http://event-bus-srv:4005/events', {
         type: 'CommentModerated',
         data: {
           id: data.id,
@@ -28,5 +28,6 @@ app.post('/events', async (req, res) => {
 });
 
 app.listen(4003, () => {
+  console.log('Hello. This is a comment moderation service');
   console.log('Listening on 4003');
 });
