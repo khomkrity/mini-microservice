@@ -22,7 +22,16 @@ The following are the main components (services) of the system:
 - **Query**: A service used to serve and sync all the data to the client. This service is a replacement for `GET` posts and comments in order to minimize making lots of requests by the client.
 - **Event Bus**: Receives events and publishes them to all of the services.
 
-*Side Note*: *Each service is contained inside a docker image which will be deployed inside a pod (one pod per container) which is exposed by a Cluster IP service.*
+*Side Note*: *Each service is contained inside a docker image which will be deployed inside a kubernetes pod (one container per pod) which is exposed by a Cluster IP service.*
+
+## Tech Stack :toolbox:
+- **Front-end**: React
+- **Back-end**: Express.js, node.js
+- **Database**: Local machine (literally)
+- **Devops**: Docker, Kubernetes, ingress-nginx, skaffold
+- **Programming Languange**: Javascript
+- **Tools**: Postman, VS Code
+- **Package Manager**: npm, choco
 
 ## API Reference :compass:
 #### Get all posts and comments
