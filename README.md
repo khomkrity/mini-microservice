@@ -8,7 +8,7 @@
 
 ## Disclaimer :warning:
 > Do not use this project as a template for future microservices stuff.\
-[see why](#downside-of-this-app)
+[see why](#downside-of-this-app--1)
 
 ## System Overview :globe_with_meridians:
 > This application provides a simple post-and-comment functionality that users can create a new post and enter a comment to that post.\
